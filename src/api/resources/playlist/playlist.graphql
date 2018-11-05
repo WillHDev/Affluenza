@@ -17,13 +17,3 @@ input NewPlaylist {
   songs: [ID!]
   favorite: Boolean
 }
-
-extend type Query {
-  Playlist(id: ID!): Playlist!
-  allPlaylists: [Playlist]!
-}
-
-extend type Mutation {
-  newPlaylist(input: NewPlaylist!): Playlist!
-  updatePlaylist(input: UpdatedPlaylist!): Playlist!
-}
